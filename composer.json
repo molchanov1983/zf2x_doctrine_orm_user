@@ -1,0 +1,25 @@
+{
+    "name": "trueaxiom/zf2x_doctrine_orm_user",
+    "description": "zf2x doctrine orm user",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Richard Jennings",
+            "email": "rich@trueaxiom.co.uk"
+        }
+    ],
+   "require": {
+        "trueaxiom/zf2x": "1.0.*"
+    },
+    "require-dev": {
+        "phing/phing": "2.6.*",
+        "phpunit/PHPUnit": "3.7.*",
+        "squizlabs/php_codesniffer": "1.4.5"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZF2x\\Doctrine\\ORM\\User": "src",
+            "ZF2xTest\\Doctrine\\ORM\\User": "tests"
+        }
+    }
+}

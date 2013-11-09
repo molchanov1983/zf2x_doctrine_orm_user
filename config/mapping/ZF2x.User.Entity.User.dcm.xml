@@ -1,0 +1,12 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="ZF2x\User\Entity\User" table="auth" repository-class="ZF2x\Doctrine\ORM\User\Repository\User">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="identity" type="string" length="50" unique="true" nullable="false"/>
+        <field name="credential" type="string" length="60" unique="false" nullable="false"/>
+    </entity>
+</doctrine-mapping>

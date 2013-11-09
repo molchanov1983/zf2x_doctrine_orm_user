@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="zf2x_doctrine_orm_user" default="build">
+    <target name="composer-install">
+        <exec command="composer install --dev --no-interaction --prefer-source" passthru="true"/>
+    </target>
+    <target name="phpunit">
+        <exec command="cd tests; php run-tests.php" passthru="true" checkreturn="true"/>
+    </target>
+    <target name="phpcs">
+        <exec command="./vendor/bin/phpcs --standard=PSR2 src/ tests/" passthru="true" checkreturn="true"/>
+    </target>
+    <target name="build" depends="composer-install, phpunit, phpcs">
+
+    </target>
+</project>
