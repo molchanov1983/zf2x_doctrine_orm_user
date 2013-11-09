@@ -1,0 +1,45 @@
+box: wercker/php
+build:
+    # The steps that will be executed on build
+    steps:
+      # A custom script step, name value is used in the UI
+      # and the code value contains the command that get executed
+      - script:
+          name: install dependencies
+          code: composer install --no-interaction --prefer-source
+      - script:
+          name: php 5.3
+          code: phpenv global 5.3
+      - script:
+          name: php version
+          code: php --version
+      - script:
+          name: Configure timezone
+          code: echo 'date.timezone = "Europe/London"' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+      - script:
+          name: run phing
+          code: php vendor/bin/phing -f build.xml
+      - script:
+          name: php 5.4
+          code: phpenv global 5.4
+      - script:
+          name: php version
+          code: php --version
+      - script:
+          name: Configure timezone
+          code: echo 'date.timezone = "Europe/London"' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+      - script:
+          name: run phing
+          code: php vendor/bin/phing -f build.xml
+      - script:
+          name: php 5.5
+          code: phpenv global 5.5
+      - script:
+          name: php version
+          code: php --version
+      - script:
+          name: Configure timezone
+          code: echo 'date.timezone = "Europe/London"' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+      - script:
+          name: run phing
+          code: php vendor/bin/phing -f build.xml

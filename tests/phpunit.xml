@@ -1,0 +1,7 @@
+<phpunit bootstrap="bootstrap.php">
+    <testsuites>
+        <testsuite name="ZF2X User Doctrine Test Suite">
+            <directory>./ZF2xTest/User/Doctrine</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
