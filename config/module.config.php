@@ -3,7 +3,7 @@ return array(
     'doctrine' => array(
         'driver' => array(
             'user_entity_annotation_driver' => array(
-                'class' => 'Doctrine\ORM\Mapping\Driver\XMLDriver',
+                'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
                 'cache' => 'array',
                 'paths' => array(
                     'vendor/trueaxiom/zf2x_doctrine_orm_user/config/mapping',
